@@ -1,0 +1,18 @@
+﻿@model MyEcommerceAdmin.Models.Product
+<li>
+    <a class="aa-product-img" href="@Url.Action("ViewDetails", "Product1", new { id = Model.ProductID })">
+        <img src="@Url.Content(Model.PicturePath)" alt="" class="img-fluid img-thumbnail">
+    </a>
+        <h4 class="aa-product-title"><a href="#">@Model.Name</a></h4>
+        <span class="aa-product-price">$ @Model.UnitPrice</span><span class="aa-product-old-price">
+            <del>
+                @if (Model.OldPrice != null)
+                {
+                    <text>$ @Model.OldPrice</text>
+                }
+            </del>
+        </span>
+</li>
+
+
+
